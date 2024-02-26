@@ -23,19 +23,26 @@ class CategoriesListItem extends StatelessWidget {
           child: Row(
             children: [
               if (category.categoriesImage!.contains('svg'))
-                SvgPicture.network(
-                  height: 60,
-                  width: 90,
-                  '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: SvgPicture.network(
+                    height: 60,
+                    width: 90,
+                    '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
+                  ),
                 ),
               if (!category.categoriesImage!.contains('svg'))
-                CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  height: 60,
-                  width: 90,
-                  imageUrl:
-                      '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: CachedNetworkImage(
+                    fit: BoxFit.cover,
+                    height: 60,
+                    width: 90,
+                    imageUrl:
+                        '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                  ),
                 ),
               const Gap(20),
               Expanded(

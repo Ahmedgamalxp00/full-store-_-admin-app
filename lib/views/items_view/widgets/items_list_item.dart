@@ -23,18 +23,25 @@ class ItemsListItem extends StatelessWidget {
           child: Row(
             children: [
               if (item.itemsImage!.contains('svg'))
-                SvgPicture.network(
-                  height: 60,
-                  width: 90,
-                  '${AppLinks.categoriesImagesRoot}${item.itemsImage}',
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: SvgPicture.network(
+                    height: 60,
+                    width: 90,
+                    '${AppLinks.categoriesImagesRoot}${item.itemsImage}',
+                  ),
                 ),
               if (!item.itemsImage!.contains('svg'))
-                CachedNetworkImage(
-                  fit: BoxFit.cover,
-                  height: 60,
-                  width: 90,
-                  imageUrl: '${AppLinks.itemsImagesRoot}${item.itemsImage}',
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: CachedNetworkImage(
+                    fit: BoxFit.cover,
+                    height: 60,
+                    width: 90,
+                    imageUrl: '${AppLinks.itemsImagesRoot}${item.itemsImage}',
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                  ),
                 ),
               const Gap(20),
               Expanded(

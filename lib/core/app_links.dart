@@ -1,6 +1,6 @@
 abstract class AppLinks {
   // server link
-  static const String serverLink = "http://192.168.1.6/fullstoreapp";
+  static const String serverLink = "http://192.168.1.5/fullstoreapp";
   static const String categoriesImagesRoot =
       "http://192.168.1.6/fullstoreapp/upload/categories/";
   static const String itemsImagesRoot =

@@ -14,7 +14,8 @@ class Customformfield extends StatelessWidget {
       this.initialValue,
       this.keyboardType,
       this.onTap,
-      this.readOnly = false});
+      this.readOnly = false,
+      this.maxLines = 1});
   final String hint;
   final String? initialValue;
   final IconData? prefixIcon;
@@ -22,6 +23,7 @@ class Customformfield extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscuretext;
   final bool readOnly;
+  final int? maxLines;
   final TextEditingController controller;
   final String? Function(String?)? validator;
   final void Function()? onSuffixTap;
@@ -30,6 +32,8 @@ class Customformfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      minLines: 1,
+      maxLines: maxLines,
       readOnly: readOnly,
       onTap: onTap,
       keyboardType: keyboardType,

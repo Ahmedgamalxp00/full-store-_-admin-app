@@ -39,23 +39,27 @@ class EditItemForm extends StatelessWidget {
                         controller: controller.editnamearController),
                     const Gap(10),
                     Customformfield(
-                        keyboardType: TextInputType.name,
+                        maxLines: null,
+                        keyboardType: TextInputType.multiline,
                         validator: (value) => validateInput(value, 2, 255, ''),
                         hint: 'Item Description',
                         controller: controller.editDescController),
                     const Gap(10),
                     Customformfield(
-                        keyboardType: TextInputType.name,
+                        maxLines: null,
+                        keyboardType: TextInputType.multiline,
                         validator: (value) => validateInput(value, 2, 255, ''),
                         hint: 'Item Description (Arabic)',
                         controller: controller.editDescarController),
                     const Gap(10),
                     Customformfield(
+                        keyboardType: TextInputType.number,
                         validator: (value) => validateInput(value, 1, 10, ''),
                         hint: 'Item Count',
                         controller: controller.editCountController),
                     const Gap(10),
                     Customformfield(
+                        keyboardType: TextInputType.number,
                         validator: (value) => validateInput(value, 1, 20, ''),
                         hint: 'Item Price',
                         controller: controller.editPriceController),
@@ -66,6 +70,7 @@ class EditItemForm extends StatelessWidget {
                     //     controller: controller.editActiveController),
                     const Gap(10),
                     Customformfield(
+                        keyboardType: TextInputType.number,
                         hint: 'Item Discount',
                         controller: controller.editDiscountController),
                     const Gap(10),
