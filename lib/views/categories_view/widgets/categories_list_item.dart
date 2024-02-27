@@ -22,28 +22,27 @@ class CategoriesListItem extends StatelessWidget {
           padding: const EdgeInsets.all(10),
           child: Row(
             children: [
-              if (category.categoriesImage!.contains('svg'))
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: SvgPicture.network(
-                    height: 60,
-                    width: 90,
-                    '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
-                  ),
-                ),
-              if (!category.categoriesImage!.contains('svg'))
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: CachedNetworkImage(
-                    fit: BoxFit.cover,
-                    height: 60,
-                    width: 90,
-                    imageUrl:
+              category.categoriesImage!.contains('svg')
+                  ? ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: SvgPicture.network(
+                        height: 60,
+                        width: 90,
                         '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
-                  ),
-                ),
+                      ),
+                    )
+                  : ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: CachedNetworkImage(
+                        fit: BoxFit.cover,
+                        height: 60,
+                        width: 90,
+                        imageUrl:
+                            '${AppLinks.categoriesImagesRoot}${category.categoriesImage}',
+                        errorWidget: (context, url, error) =>
+                            const Icon(Icons.error),
+                      ),
+                    ),
               const Gap(20),
               Expanded(
                 child: Column(
