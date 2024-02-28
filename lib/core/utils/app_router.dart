@@ -1,3 +1,4 @@
+import 'package:admin_app/core/middleware/mymiddleware.dart';
 import 'package:admin_app/views/auth_views/forget_password_view.dart';
 import 'package:admin_app/views/auth_views/login_view.dart';
 import 'package:admin_app/views/auth_views/otp_view.dart';
@@ -11,11 +12,13 @@ import 'package:admin_app/views/home_views/home_view.dart';
 import 'package:admin_app/views/items_view/add_item_view.dart';
 import 'package:admin_app/views/items_view/edit_item_view.dart';
 import 'package:admin_app/views/items_view/items_view.dart';
+import 'package:admin_app/views/language_view/language_view.dart';
 import 'package:admin_app/views/orders_view/orders_main_view.dart';
 import 'package:admin_app/views/orders_details_view/orders_details_view.dart';
 import 'package:admin_app/views/orders_view/accepted_orders_view.dart';
 import 'package:admin_app/views/orders_view/archived_orders_view.dart';
 import 'package:admin_app/views/orders_view/pending_orders_view.dart';
+import 'package:admin_app/views/profile_view/profile_view.dart';
 
 import 'package:get/get.dart';
 
@@ -55,12 +58,12 @@ class AppRoute {
 }
 
 List<GetPage<dynamic>> myRoutes = [
-  GetPage(name: '/', page: () => const HomeView()),
-  // GetPage(
-  //   name: '/',
-  //   page: () => const LanguageView(),
-  //   middlewares: [MyMiddlewalre()],
-  // ),
+  // GetPage(name: '/', page: () => const HomeView()),
+  GetPage(
+    name: '/',
+    page: () => const LanguageView(),
+    middlewares: [MyMiddlewalre()],
+  ),
   GetPage(name: AppRoute.loginView, page: () => const LoginView()),
   GetPage(name: AppRoute.forgetPassView, page: () => const ForgetPassView()),
   GetPage(name: AppRoute.otpView, page: () => const OtpView()),
@@ -98,7 +101,7 @@ List<GetPage<dynamic>> myRoutes = [
   //     page: () => const ProductDetailesView()),
   // GetPage(name: AppRoute.favoriteView, page: () => const FavoriteView()),
   // GetPage(name: AppRoute.cartView, page: () => const CartView()),
-  // GetPage(name: AppRoute.profileView, page: () => const ProfileView()),
+  GetPage(name: AppRoute.profileView, page: () => const ProfileView()),
   // GetPage(name: AppRoute.addressView, page: () => const AddressView()),
   // GetPage(name: AppRoute.addAddressView, page: () => const AddAddressView()),
   // GetPage(name: AppRoute.chechOutView, page: () => const ChechOutView()),

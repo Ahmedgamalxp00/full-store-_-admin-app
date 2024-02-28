@@ -110,6 +110,10 @@ class Assets {
   /// assets/images/laptop.png
   static const String imagesLaptop = "assets/images/laptop.png";
 
+  /// Assets for imagesLogout
+  /// assets/images/logout.png
+  static const String imagesLogout = "assets/images/logout.png";
+
   /// Assets for imagesNotification
   /// assets/images/notification.png
   static const String imagesNotification = "assets/images/notification.png";
@@ -133,6 +137,10 @@ class Assets {
   /// Assets for imagesSaleTag
   /// assets/images/sale-tag.png
   static const String imagesSaleTag = "assets/images/sale-tag.png";
+
+  /// Assets for imagesSettings
+  /// assets/images/settings.png
+  static const String imagesSettings = "assets/images/settings.png";
 
   /// Assets for imagesSplash1
   /// assets/images/splash_1.svg
@@ -161,4 +169,52 @@ class Assets {
   /// Assets for lottieLoading
   /// assets/lottie/loading.json
   static const String lottieLoading = "assets/lottie/loading.json";
+
+  /// Assets for screen_shots1
+  /// assets/screen_shots/1.png
+  static const String screen_shots1 = "assets/screen_shots/1.png";
+
+  /// Assets for screen_shots10
+  /// assets/screen_shots/10.png
+  static const String screen_shots10 = "assets/screen_shots/10.png";
+
+  /// Assets for screen_shots11
+  /// assets/screen_shots/11.png
+  static const String screen_shots11 = "assets/screen_shots/11.png";
+
+  /// Assets for screen_shots12
+  /// assets/screen_shots/12.png
+  static const String screen_shots12 = "assets/screen_shots/12.png";
+
+  /// Assets for screen_shots2
+  /// assets/screen_shots/2.png
+  static const String screen_shots2 = "assets/screen_shots/2.png";
+
+  /// Assets for screen_shots3
+  /// assets/screen_shots/3.png
+  static const String screen_shots3 = "assets/screen_shots/3.png";
+
+  /// Assets for screen_shots4
+  /// assets/screen_shots/4.png
+  static const String screen_shots4 = "assets/screen_shots/4.png";
+
+  /// Assets for screen_shots5
+  /// assets/screen_shots/5.png
+  static const String screen_shots5 = "assets/screen_shots/5.png";
+
+  /// Assets for screen_shots6
+  /// assets/screen_shots/6.png
+  static const String screen_shots6 = "assets/screen_shots/6.png";
+
+  /// Assets for screen_shots7
+  /// assets/screen_shots/7.png
+  static const String screen_shots7 = "assets/screen_shots/7.png";
+
+  /// Assets for screen_shots8
+  /// assets/screen_shots/8.png
+  static const String screen_shots8 = "assets/screen_shots/8.png";
+
+  /// Assets for screen_shots9
+  /// assets/screen_shots/9.png
+  static const String screen_shots9 = "assets/screen_shots/9.png";
 }

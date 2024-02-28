@@ -6,9 +6,7 @@ import 'package:get/get.dart';
 class MyBinding extends Bindings {
   @override
   void dependencies() {
-    // Get.lazyPut(() => SignUpController(), fenix: true);
     Get.put(Dio());
     Get.put(ApiService());
-    // Get.put(MainViewController());
   }
 }

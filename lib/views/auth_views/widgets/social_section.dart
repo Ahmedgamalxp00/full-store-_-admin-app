@@ -1,9 +1,5 @@
-import 'package:admin_app/core/utils/app_assets.dart';
 import 'package:admin_app/core/utils/app_styles.dart';
-import 'package:admin_app/views/auth_views/widgets/social_item.dart';
 import 'package:flutter/material.dart';
-
-import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
 class ScocialSection extends StatelessWidget {

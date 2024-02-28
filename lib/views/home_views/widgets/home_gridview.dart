@@ -1,3 +1,4 @@
+import 'package:admin_app/controllers/home_controller.dart';
 import 'package:admin_app/core/utils/app_assets.dart';
 import 'package:admin_app/core/utils/app_router.dart';
 import 'package:admin_app/views/home_views/widgets/home_grid_item.dart';
@@ -9,6 +10,7 @@ class HomeGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    HomeController homeController = Get.put(HomeController());
     return GridView.count(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       childAspectRatio: 0.77,
@@ -51,6 +53,13 @@ class HomeGridView extends StatelessWidget {
           title: 'Notifications',
           image: Assets.imagesNotification,
           onTap: () {},
+        ),
+        HomeGridItem(
+          title: 'logout',
+          image: Assets.imagesLogout,
+          onTap: () {
+            homeController.logOut();
+          },
         ),
       ],
     );

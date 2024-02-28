@@ -8,10 +8,7 @@ import 'package:admin_app/core/shared/custom_loading1.dart';
 import 'package:admin_app/core/utils/app_router.dart';
 import 'package:admin_app/core/utils/app_styles.dart';
 import 'package:admin_app/core/utils/request_state.dart';
-import 'package:admin_app/views/auth_views/widgets/auth_footer.dart';
-import 'package:admin_app/views/auth_views/widgets/social_section.dart';
 import 'package:flutter/material.dart';
-
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -98,18 +95,6 @@ class LoginView extends StatelessWidget {
                           onTap: () async {
                             await loginController.login();
                           },
-                        ),
-                        const Gap(50),
-                        const Align(
-                          alignment: Alignment.center,
-                          child: ScocialSection(),
-                        ),
-                        AuthFooter(
-                          onPressed: () {
-                            Get.offNamed(AppRoute.signUp);
-                          },
-                          text1: '16'.tr,
-                          text2: '9'.tr,
                         ),
                       ],
                     ),

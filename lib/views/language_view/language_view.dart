@@ -1,9 +1,7 @@
 import 'package:admin_app/core/shared/custom_botton.dart';
-import 'package:admin_app/core/utils/app_router.dart';
 import 'package:admin_app/core/utils/app_styles.dart';
 import 'package:admin_app/localization/language_controller.dart';
 import 'package:flutter/material.dart';
-
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 
@@ -27,7 +25,6 @@ class LanguageView extends GetView<LanguageController> {
               text: 'Ar',
               onTap: () {
                 controller.changeLanguage("ar");
-                Get.offNamed(AppRoute.loginView);
               },
             ),
             const Gap(20),
@@ -35,7 +32,6 @@ class LanguageView extends GetView<LanguageController> {
                 text: 'En',
                 onTap: () {
                   controller.changeLanguage("en");
-                  Get.offNamed(AppRoute.loginView);
                 }),
           ],
         ),

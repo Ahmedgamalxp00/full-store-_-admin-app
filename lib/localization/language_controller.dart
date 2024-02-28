@@ -1,3 +1,4 @@
+import 'package:admin_app/core/utils/app_router.dart';
 import 'package:admin_app/services/services.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,7 @@ class LanguageController extends GetxController {
     Locale locale = Locale(languageCode);
     myServices.sharedPreferences.setString("lang", languageCode);
     Get.updateLocale(locale);
+    Get.offAllNamed(AppRoute.loginView);
   }
 
   @override

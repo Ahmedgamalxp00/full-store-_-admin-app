@@ -1,5 +1,4 @@
 import 'package:admin_app/controllers/profile_controller.dart';
-import 'package:admin_app/core/functions/eixt_app_alert.dart';
 import 'package:admin_app/views/profile_view/widgets/profile_list.dart';
 import 'package:admin_app/views/profile_view/widgets/user_info.dart';
 import 'package:flutter/material.dart';
@@ -14,23 +13,18 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(ProfileController());
-    return PopScope(
-      canPop: false,
-      onPopInvoked: (didPop) {
-        exitAppAlert();
-      },
-      child: const Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(bottom: 70),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ProfilePicture(),
-                UserInfo(),
-                ProfileList(),
-              ],
-            ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 70),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ProfilePicture(),
+              UserInfo(),
+              ProfileList(),
+            ],
           ),
         ),
       ),
